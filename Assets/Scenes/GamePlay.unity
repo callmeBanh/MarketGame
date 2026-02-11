@@ -185,7 +185,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5580341494917091658, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: -5580341494917091658, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,7 +338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
-  groupValue: 3
 --- !u!61 &304267570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -478,7 +477,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3513758884507561144, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: -3513758884507561144, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -569,7 +568,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3513758884507561144, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: -3513758884507561144, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -848,7 +847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
-  targetNumber: 2
 --- !u!1 &805849220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1186,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5580341494917091658, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: -5580341494917091658, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1279,7 +1277,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3513758884507561144, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: -3513758884507561144, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1456,7 +1454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
-  targetNumber: 3
 --- !u!1 &1507613686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
-  targetNumber: 1
 --- !u!1 &1604565057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
-  groupValue: 2
 --- !u!1 &1775414991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,7 +2068,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6374121653112362311, guid: 79e3863d536ee9e42a8ce6c2d352c1fb, type: 3}
+  m_Sprite: {fileID: 6374121653112362311, guid: 5edae7ead64eafd4490ec3acf43d5956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2110,7 +2105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
-  groupValue: 1
 --- !u!1 &1800033682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,8 +2479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9868056fde4ed45b9d5fc80fb06ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  audioSource: {fileID: 0}
-  correctSound: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
