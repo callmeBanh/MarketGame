@@ -300,7 +300,8 @@ GameObject:
   - component: {fileID: 304267568}
   - component: {fileID: 304267571}
   - component: {fileID: 304267570}
-  - component: {fileID: 304267569}
+  - component: {fileID: 304267572}
+  - component: {fileID: 304267573}
   m_Layer: 0
   m_Name: Group_Orange
   m_TagString: Untagged
@@ -326,18 +327,6 @@ Transform:
   - {fileID: 380303138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &304267569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304267567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DragFruit
 --- !u!61 &304267570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -392,7 +381,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304267567}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -411,6 +400,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &304267572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304267567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragFruit
+--- !u!114 &304267573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304267567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481dbc4ea63982e47a1aa024702166fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitData
+  fruitValue: 3
 --- !u!1 &380303136
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +619,7 @@ GameObject:
   - component: {fileID: 574948584}
   - component: {fileID: 574948583}
   - component: {fileID: 574948582}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +721,7 @@ GameObject:
   - component: {fileID: 798513046}
   - component: {fileID: 798513047}
   - component: {fileID: 798513048}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: basket_3
   m_TagString: Basket
   m_Icon: {fileID: 0}
@@ -847,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
+  targetNumber: 2
 --- !u!1 &805849220
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +874,7 @@ GameObject:
   - component: {fileID: 805849224}
   - component: {fileID: 805849223}
   - component: {fileID: 805849222}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +1009,7 @@ GameObject:
   - component: {fileID: 1035140397}
   - component: {fileID: 1035140399}
   - component: {fileID: 1035140398}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1329,7 @@ GameObject:
   - component: {fileID: 1350247490}
   - component: {fileID: 1350247491}
   - component: {fileID: 1350247492}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: basket_2
   m_TagString: Basket
   m_Icon: {fileID: 0}
@@ -1454,6 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
+  targetNumber: 3
 --- !u!1 &1507613686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1482,7 @@ GameObject:
   - component: {fileID: 1507613687}
   - component: {fileID: 1507613689}
   - component: {fileID: 1507613690}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: basket_1
   m_TagString: Basket
   m_Icon: {fileID: 0}
@@ -1606,6 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5771eee23d5a004e8cc15022bdc9551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
+  targetNumber: 1
 --- !u!1 &1604565057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1634,7 @@ GameObject:
   - component: {fileID: 1604565058}
   - component: {fileID: 1604565060}
   - component: {fileID: 1604565059}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1771,7 @@ GameObject:
   - component: {fileID: 1617352986}
   - component: {fileID: 1617352988}
   - component: {fileID: 1617352987}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,6 +1908,7 @@ GameObject:
   - component: {fileID: 1741526845}
   - component: {fileID: 1741526844}
   - component: {fileID: 1741526843}
+  - component: {fileID: 1741526847}
   - component: {fileID: 1741526846}
   m_Layer: 0
   m_Name: Group_Pear
@@ -1907,7 +1925,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741526842}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1998,6 +2016,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741526842}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481dbc4ea63982e47a1aa024702166fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitData
+  fruitValue: 2
+--- !u!114 &1741526847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741526842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
@@ -2011,7 +2042,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1775414993}
   - component: {fileID: 1775414992}
-  - component: {fileID: 1775414994}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -2086,25 +2116,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775414991}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3534746, y: 3.6343546, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.45288467, y: 3.0929246, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1969231980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1775414994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775414991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DragFruit
 --- !u!1 &1800033682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2135,7 @@ GameObject:
   - component: {fileID: 1800033686}
   - component: {fileID: 1800033685}
   - component: {fileID: 1800033684}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,6 +2453,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969231975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969231980}
+  - component: {fileID: 1969231979}
+  - component: {fileID: 1969231978}
+  - component: {fileID: 1969231977}
+  - component: {fileID: 1969231976}
+  m_Layer: 0
+  m_Name: Group_Apple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1969231976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969231975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragFruit
+--- !u!114 &1969231977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969231975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481dbc4ea63982e47a1aa024702166fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitData
+  fruitValue: 1
+--- !u!61 &1969231978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969231975}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.37793863, y: 3.043938}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.7558773, y: 1.7354474}
+  m_EdgeRadius: 0
+--- !u!50 &1969231979
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969231975}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!4 &1969231980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969231975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.90059, y: 0.54143, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1775414993}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139749684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9868056fde4ed45b9d5fc80fb06ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  totalGroups: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2488,6 +2641,6 @@ SceneRoots:
   - {fileID: 1859652296}
   - {fileID: 820667397}
   - {fileID: 2139749685}
-  - {fileID: 1775414993}
   - {fileID: 1741526845}
   - {fileID: 304267568}
+  - {fileID: 1969231980}
