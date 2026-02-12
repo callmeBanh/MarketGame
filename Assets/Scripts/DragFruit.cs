@@ -37,11 +37,13 @@ public class DragFruit : MonoBehaviour
     }
 
 void CheckMatch() {
-    // Quét tất cả các vật thể chạm vào vùng tròn
-    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.0f);
+    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.0f); 
     bool foundCorrectBasket = false;
 
     foreach (var hit in hits) {
+        // In ra Console để bạn biết quả đang chạm vào vật gì
+        Debug.Log("Quả đang chạm vào: " + hit.gameObject.name + " với Tag: " + hit.tag);
+
         if (hit.CompareTag("Basket")) {
             Basket basket = hit.GetComponent<Basket>();
             if (basket != null && data != null && data.fruitValue == basket.targetNumber) {
@@ -52,10 +54,10 @@ void CheckMatch() {
     }
 
     if (foundCorrectBasket) {
-        gameObject.SetActive(false); // Ẩn ngay
+        gameObject.SetActive(false); // Ẩn quả
         if (GameManager.instance != null) GameManager.instance.AddCompletedGroup();
     } else {
-        transform.position = startPos; // Luôn bay về nếu không khớp
+        transform.position = startPos; // Trả về vị trí cũ
     }
 }
 
