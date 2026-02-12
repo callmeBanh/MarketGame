@@ -1,62 +1,69 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Cấu hình trò chơi")]
-    public GameObject fruitGroups; // Object chứa tất cả các Group quả
-    public int totalGroups = 3;    // Táo, Lê, Cam
+    [Header("Cấu hình Màn chơi")]
+    public List<GameObject> levelPrefabs; 
+    public static int currentLevelIndex = 0; // Chỉ số màn chơi hiện tại
+
+    private GameObject spawnedLevel;
+
+    [Header("Tiến độ")]
+    public int totalGroups = 3; 
     private int completedGroups = 0;
 
     private void Awake()
     {
-        // Thiết lập Singleton
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
     private void Start()
     {
-        // 1. Hiện trái cây ngay lập tức khi vào game
-        if (fruitGroups != null) 
-        {
-            fruitGroups.SetActive(true);
-        }
-
-        // 2. Thông báo bắt đầu game
-        Debug.Log("Trò chơi đã bắt đầu!");
+        // Đảm bảo không nạp quá số màn trong danh sách
+        if (currentLevelIndex >= levelPrefabs.Count) currentLevelIndex = 0;
+        
+        LoadLevel(currentLevelIndex);
     }
 
-    public void AddCompletedGroup()
+    public void LoadLevel(int index)
     {
-        completedGroups++;
-        Debug.Log($"Đã hoàn thành: {completedGroups}/{totalGroups}");
+        if (spawnedLevel != null) Destroy(spawnedLevel);
 
-        if (completedGroups >= totalGroups)
+        if (index < levelPrefabs.Count)
         {
-            // THẮNG CUỘC:
-            // Dừng đồng hồ đếm ngược
-            if (TimeManager.instance != null) 
+            spawnedLevel = Instantiate(levelPrefabs[index], Vector3.zero, Quaternion.identity);
+            completedGroups = 0;
+            
+            if (TimeManager.instance != null)
             {
-                TimeManager.instance.StopTimer();
+                TimeManager.instance.timeRemaining = 30f;
             }
-
-            // Chờ 1 giây rồi chuyển sang màn hình Win
-            Invoke("GoToWinScene", 1.0f);
         }
     }
+
+public void AddCompletedGroup()
+{
+    completedGroups++;
+    if (completedGroups >= totalGroups)
+    {
+        if (TimeManager.instance != null) TimeManager.instance.StopTimer();
+        // KHÔNG tăng currentLevelIndex ở đây
+        Invoke("GoToWinScene", 1.0f);
+    }
+}
 
     private void GoToWinScene()
     {
-        Debug.Log("Chuyển sang màn hình chiến thắng!");
         loadingController.LoadScene("Win");
+    }
+    
+    // Hàm hỗ trợ để MenuController kiểm tra xem đã là màn cuối chưa
+    public static bool IsLastLevel(int totalLevels)
+    {
+        return currentLevelIndex >= totalLevels - 1;
     }
 }
