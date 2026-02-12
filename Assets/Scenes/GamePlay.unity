@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   timerText: {fileID: 1310950906}
-  timeRemaining: 10
+  timeRemaining: 0
 --- !u!4 &1706201018
 Transform:
   m_ObjectHideFlags: 0
