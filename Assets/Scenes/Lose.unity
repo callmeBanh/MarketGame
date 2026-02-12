@@ -666,6 +666,7 @@ GameObject:
   - component: {fileID: 925468401}
   - component: {fileID: 925468400}
   - component: {fileID: 925468403}
+  - component: {fileID: 925468404}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -737,7 +738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033980441}
+      - m_Target: {fileID: 925468404}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: BackToMainMenu
         m_Mode: 1
@@ -801,6 +802,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::buttonAnimation
   buttonScale: 1.2
   buttonDownScale: 0.8
+--- !u!114 &925468404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925468398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1017808b722245e4cb29fa7233d616ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  nextLevelButton: {fileID: 0}
 --- !u!1 &1166717199
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +995,7 @@ GameObject:
   - component: {fileID: 1466007602}
   - component: {fileID: 1466007601}
   - component: {fileID: 1466007604}
+  - component: {fileID: 1466007605}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1052,7 +1067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033980441}
+      - m_Target: {fileID: 1466007605}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: TryAgain
         m_Mode: 1
@@ -1116,6 +1131,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::buttonAnimation
   buttonScale: 1.2
   buttonDownScale: 0.8
+--- !u!114 &1466007605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466007599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1017808b722245e4cb29fa7233d616ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  nextLevelButton: {fileID: 0}
 --- !u!1 &1850222382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,4 +1363,3 @@ SceneRoots:
   - {fileID: 2043967268}
   - {fileID: 30957740}
   - {fileID: 399821881}
-  - {fileID: 1033980442}
