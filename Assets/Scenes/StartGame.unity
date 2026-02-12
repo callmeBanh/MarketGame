@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1017808b722245e4cb29fa7233d616ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  nextLevelButton: {fileID: 0}
 --- !u!114 &155161716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +441,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 507287812}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: startGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -500,6 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1017808b722245e4cb29fa7233d616ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  nextLevelButton: {fileID: 0}
 --- !u!114 &507287813
 MonoBehaviour:
   m_ObjectHideFlags: 0
