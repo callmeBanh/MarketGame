@@ -1,6 +1,4 @@
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class sound : MonoBehaviour
 {
@@ -14,6 +12,11 @@ public class sound : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             audioSource = GetComponent<AudioSource>();
+            
+            // Nếu quên chưa gắn AudioSource, tự động thêm vào để tránh lỗi Null
+            if (audioSource == null) {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
         }
         else
         {
@@ -23,7 +26,7 @@ public class sound : MonoBehaviour
 
     public void ToggleSound()
     {
-        if(audioSource != null)
+        if (audioSource != null)
         {
             audioSource.mute = !audioSource.mute;
         }
@@ -31,6 +34,6 @@ public class sound : MonoBehaviour
 
     public bool isMuted()
     {
-        return audioSource != null && audioSource.mute;
+        return audioSource == null || audioSource.mute;
     }
 }

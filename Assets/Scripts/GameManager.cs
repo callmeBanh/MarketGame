@@ -1,21 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI; // Cần thiết để điều khiển Button
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Cấu hình UI")]
-    public GameObject startPopup; // Kéo StartPopup vào đây
-    public Button agreeButton;    // Kéo Button Đồng Ý vào đây
-
     [Header("Cấu hình trò chơi")]
-    public GameObject fruitGroups; // Kéo Object chứa tất cả các Group quả vào đây
-    public int totalGroups = 3; 
+    public GameObject fruitGroups; // Object chứa tất cả các Group quả
+    public int totalGroups = 3;    // Táo, Lê, Cam
     private int completedGroups = 0;
 
     private void Awake()
     {
+        // Thiết lập Singleton
         if (instance == null)
         {
             instance = this;
@@ -28,34 +25,31 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Bước 1: Khi vào Scene, hiện Popup và ẩn các nhóm quả
-        if (startPopup != null) startPopup.SetActive(true);
-        if (fruitGroups != null) fruitGroups.SetActive(false);
-
-        // Bước 2: Lắng nghe sự kiện nhấn nút
-        if (agreeButton != null)
+        // 1. Hiện trái cây ngay lập tức khi vào game
+        if (fruitGroups != null) 
         {
-            agreeButton.onClick.AddListener(StartGameplay);
+            fruitGroups.SetActive(true);
         }
-    }
 
-    // Hàm này chạy khi nhấn nút Đồng Ý
-    private void StartGameplay()
-    {
-        // Bước 3: Tắt Popup và hiện các nhóm quả để bắt đầu chơi
-        if (startPopup != null) startPopup.SetActive(false);
-        if (fruitGroups != null) fruitGroups.SetActive(true);
-        
-        Debug.Log("Trò chơi chính thức bắt đầu!");
+        // 2. Thông báo bắt đầu game
+        Debug.Log("Trò chơi đã bắt đầu!");
     }
 
     public void AddCompletedGroup()
     {
         completedGroups++;
-        Debug.Log("Đã hoàn thành: " + completedGroups + "/" + totalGroups);
+        Debug.Log($"Đã hoàn thành: {completedGroups}/{totalGroups}");
 
         if (completedGroups >= totalGroups)
         {
+            // THẮNG CUỘC:
+            // Dừng đồng hồ đếm ngược
+            if (TimeManager.instance != null) 
+            {
+                TimeManager.instance.StopTimer();
+            }
+
+            // Chờ 1 giây rồi chuyển sang màn hình Win
             Invoke("GoToWinScene", 1.0f);
         }
     }
@@ -63,7 +57,6 @@ public class GameManager : MonoBehaviour
     private void GoToWinScene()
     {
         Debug.Log("Chuyển sang màn hình chiến thắng!");
-        // Đảm bảo bạn đã có class loadingController trong project
         loadingController.LoadScene("Win");
     }
 }

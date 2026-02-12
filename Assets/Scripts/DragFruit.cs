@@ -8,9 +8,9 @@ public class DragFruit : MonoBehaviour
 
     void Start()
     {
-        // Lưu vị trí cũ để trả về nếu bé kéo sai thúng
+        // Lưu vị trí ban đầu để trả về nếu kéo sai thúng
         startPos = transform.position;
-        // Lấy giá trị số lượng quả từ FruitData
+        // Lấy thông tin giá trị quả (1, 2, hoặc 3) từ script FruitData
         data = GetComponent<FruitData>();
     }
 
@@ -29,61 +29,40 @@ public class DragFruit : MonoBehaviour
     {
         if (isDragging)
         {
-            // Cập nhật vị trí nhóm quả theo chuột/tay chạm
+            // Cập nhật vị trí nhóm quả theo chuột hoặc tay chạm
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
+            mousePos.z = 0; // Giữ nguyên tọa độ Z để không bị khuất sau Background
             transform.position = mousePos;
         }
     }
 
-    void CheckMatch()
-    {
-        // Tạo vùng quét va chạm hình tròn tại vị trí hiện tại của quả (bán kính 0.8f)
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f);
+void CheckMatch() {
+    // Quét tất cả các vật thể chạm vào vùng tròn
+    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1.0f);
+    bool foundCorrectBasket = false;
 
-        // Kiểm tra xem có chạm vào Thúng (Tag: Basket) không
-        if (hit != null && hit.CompareTag("Basket"))
-        {
+    foreach (var hit in hits) {
+        if (hit.CompareTag("Basket")) {
             Basket basket = hit.GetComponent<Basket>();
-
-            // So sánh giá trị nhóm quả và số mục tiêu trên thúng
-            if (basket != null && data != null && data.fruitValue == basket.targetNumber)
-            {
-                // ĐÚNG:
-                // 1. Phát âm thanh (Sử dụng sound.instance có sẵn của bạn)
-                if (sound.instance != null && !sound.instance.isMuted())
-                {
-                    // Bạn có thể tạo thêm hàm PlayCorrectSound() trong sound.cs
-                    // Ở đây tạm gọi Toggle để kiểm tra kết nối
-                    sound.instance.ToggleSound(); 
-                }
-
-                // 2. Báo cho GameManager
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.AddCompletedGroup();
-                }
-
-                // 3. Ẩn nhóm quả
-                gameObject.SetActive(false);
+            if (basket != null && data != null && data.fruitValue == basket.targetNumber) {
+                foundCorrectBasket = true;
+                break;
             }
-            else
-            {
-                // SAI (Nhầm thúng): Bay về chỗ cũ
-                transform.position = startPos;
-            }
-        }
-        else
-        {
-            // Thả ngoài: Bay về chỗ cũ
-            transform.position = startPos;
         }
     }
 
-    // Vẽ vùng nhận diện va chạm trong Scene để bạn dễ quan sát
+    if (foundCorrectBasket) {
+        gameObject.SetActive(false); // Ẩn ngay
+        if (GameManager.instance != null) GameManager.instance.AddCompletedGroup();
+    } else {
+        transform.position = startPos; // Luôn bay về nếu không khớp
+    }
+}
+
+    // Vẽ vùng nhận diện trong Scene để bạn dễ căn chỉnh
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 0.8f);
+        Gizmos.DrawWireSphere(transform.position, 1.2f);
     }
 }
