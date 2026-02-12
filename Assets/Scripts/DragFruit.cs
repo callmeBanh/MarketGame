@@ -39,7 +39,7 @@ public class DragFruit : MonoBehaviour
     void CheckMatch()
     {
         // Tạo vùng quét va chạm hình tròn tại vị trí hiện tại của quả (bán kính 0.8f)
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.2f);
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, 1.2f);
 
         // Kiểm tra xem có chạm vào Thúng (Tag: Basket) không
         if (hit != null && hit.CompareTag("Basket"))
