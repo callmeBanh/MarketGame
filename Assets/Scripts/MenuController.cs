@@ -47,4 +47,22 @@ public void TryAgain()
         GameManager.currentLevelIndex = 0; 
         loadingController.LoadScene("StartGame");
     }
+
+    public void QuitGame()
+    {
+          Debug.Log("Quit Game Clicked");
+
+    #if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false;
+    #else
+    Application.Quit();
+    #endif
+    }
+
+    public void startGame()
+    {
+        Time.timeScale = 1;
+        GameManager.currentLevelIndex = 0; 
+        loadingController.LoadScene("GamePlay");
+    }
 }
