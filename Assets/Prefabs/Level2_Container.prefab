@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 322146820774635911}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.93, y: -4.02, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 2, y: -3.8, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7675145198361015633}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2000726247262814106, guid: 1516c158bfb4ec747a9864ad7fd92f19, type: 3}
+  m_Sprite: {fileID: -4876249033884023235, guid: 343a88772da0eb04facf35d4082dcd96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,17 +128,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.046442628, y: 0.00000023841858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.28, y: 3.09}
+    oldSize: {x: 2.05, y: 2.24}
     newSize: {x: 4.28, y: 3.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.28, y: 3.09}
+  m_Size: {x: 1.8650191, y: 2.3004866}
   m_EdgeRadius: 0
 --- !u!114 &6008615246349006594
 MonoBehaviour:
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
   targetNumber: 3
+  fullBasketSprite: {fileID: -2359611407999258724, guid: 669c4bfb4264c2b43a1c197e1004a10b, type: 3}
 --- !u!1 &472218157746150853
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +374,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.482, y: -0.153, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2913877381535686527}
@@ -529,8 +530,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -738,7 +739,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.15717107, y: 0.12600362}
+  m_Offset: {x: 0.21040812, y: 0.18696404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -748,7 +749,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9589406, y: 2.2013872}
+  m_Size: {x: 1.8524666, y: 2.0794663}
   m_EdgeRadius: 0
 --- !u!50 &6916501368990384198
 Rigidbody2D:
@@ -789,6 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
+  checkRadius: 0.7
 --- !u!114 &6362241779824127119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,8 +1127,8 @@ Transform:
   m_GameObject: {fileID: 3844227881547081384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -4.02, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0, y: -3.8, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2634579252092184578}
@@ -1181,7 +1183,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2000726247262814106, guid: 1516c158bfb4ec747a9864ad7fd92f19, type: 3}
+  m_Sprite: {fileID: -4876249033884023235, guid: 343a88772da0eb04facf35d4082dcd96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1225,17 +1227,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000011920929, y: -0.01161027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.28, y: 3.09}
+    oldSize: {x: 2.05, y: 2.24}
     newSize: {x: 4.28, y: 3.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.28, y: 3.09}
+  m_Size: {x: 1.957905, y: 2.2308264}
   m_EdgeRadius: 0
 --- !u!114 &2963980881663534248
 MonoBehaviour:
@@ -1250,6 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
   targetNumber: 5
+  fullBasketSprite: {fileID: 6387106789834289023, guid: c3f6ff095da3f004ca8fa2e40b8600e6, type: 3}
 --- !u!1 &4140459645594738498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,8 +1345,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1414,7 +1417,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.676, y: 0.493, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2913877381535686527}
@@ -1577,7 +1580,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.117091775, y: -0.13713288}
+  m_Offset: {x: -0.117091656, y: -0.1677872}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1587,7 +1590,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.705538, y: 1.7099013}
+  m_Size: {x: 1.490957, y: 1.2194316}
   m_EdgeRadius: 0
 --- !u!114 &5088088150435746977
 MonoBehaviour:
@@ -1614,6 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
+  checkRadius: 0.7
 --- !u!1 &5694160335401566825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1736,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.003, y: 0.514, z: 0}
-  m_LocalScale: {x: 1.13, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2913877381535686527}
@@ -1897,7 +1901,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.11993301, y: 0.35266054}
+  m_Offset: {x: -0.01644063, y: 0.18022984}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1907,7 +1911,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4086492, y: 2.0648282}
+  m_Size: {x: 2.2016644, y: 1.7199665}
   m_EdgeRadius: 0
 --- !u!114 &1980972851067600262
 MonoBehaviour:
@@ -1921,6 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b29142cd728464a955aa3bc4cfa798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragFruit
+  checkRadius: 0.7
 --- !u!114 &8787861674421772343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,8 +1967,8 @@ Transform:
   m_GameObject: {fileID: 6760742295012854067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.98, y: -4, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: -2, y: -3.8, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2433525081145886407}
@@ -2018,7 +2023,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2000726247262814106, guid: 1516c158bfb4ec747a9864ad7fd92f19, type: 3}
+  m_Sprite: {fileID: -4876249033884023235, guid: 343a88772da0eb04facf35d4082dcd96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2062,17 +2067,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.023222208, y: -0.0116099715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.28, y: 3.09}
+    oldSize: {x: 2.05, y: 2.24}
     newSize: {x: 4.28, y: 3.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.28, y: 3.09}
+  m_Size: {x: 2.0507884, y: 2.1843815}
   m_EdgeRadius: 0
 --- !u!114 &9104928937185661348
 MonoBehaviour:
@@ -2087,6 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
   targetNumber: 4
+  fullBasketSprite: {fileID: -305295542474701254, guid: 3f6e6ca776e94094183f1818d8e84845, type: 3}
 --- !u!1 &7503571073388932544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2120,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.651, y: 0.566, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2913877381535686527}
@@ -2452,8 +2458,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2652,7 +2658,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.313, y: -0.238, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2913877381535686527}
