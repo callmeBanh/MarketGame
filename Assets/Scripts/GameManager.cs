@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             
             if (TimeManager.instance != null)
             {
-                TimeManager.instance.timeRemaining = 30f;
+               TimeManager.instance.StartTimer(30f); // Bắt đầu lại đồng hồ
             }
         }
     }
@@ -52,7 +52,7 @@ public void AddCompletedGroup()
     {
         if (TimeManager.instance != null) TimeManager.instance.StopTimer();
         // KHÔNG tăng currentLevelIndex ở đây
-        Invoke("GoToWinScene", 1.0f);
+        HandleLevelCompletion();
     }
 }
 
@@ -65,5 +65,21 @@ public void AddCompletedGroup()
     public static bool IsLastLevel(int totalLevels)
     {
         return currentLevelIndex >= totalLevels - 1;
+    }
+
+    private void HandleLevelCompletion()
+    {
+        currentLevelIndex++;
+        if(currentLevelIndex < levelPrefabs.Count)
+        {
+            Debug.Log("Loading next level: " + currentLevelIndex);
+            LoadLevel(currentLevelIndex);
+        }
+        else
+        {
+            Debug.Log("All levels completed! Returning to main menu.");
+            if(TimeManager.instance != null) TimeManager.instance.StopTimer();
+            Invoke("GoToWinScene", 1.0f);
+        }
     }
 }

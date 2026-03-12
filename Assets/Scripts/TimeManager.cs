@@ -68,4 +68,10 @@ public class TimeManager : MonoBehaviour
     {
         isRunning = false;
     }
+
+    public void StartTimer(float newTime)
+    {
+        timeRemaining = newTime;
+        isRunning = true;
+    }
 }
