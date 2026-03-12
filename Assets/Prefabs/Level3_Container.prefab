@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
   targetNumber: 9
-  fullBasketSprite: {fileID: -6037546705694297867, guid: 580de262c6db36441b98a1a3470cb0eb, type: 3}
+  fullBasketSprite: {fileID: -7753702615072590702, guid: b7e61a6f6ba4bbb48b53d43590c5c445, type: 3}
 --- !u!1 &2784861997045297795
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Basket
   targetNumber: 6
-  fullBasketSprite: {fileID: -1905404844092665622, guid: b63e6eb386080264684ac2a426359564, type: 3}
+  fullBasketSprite: {fileID: 6687235462193322295, guid: 3403d85bfcb6db54581461c0e5304a16, type: 3}
 --- !u!1 &4460472026842101501
 GameObject:
   m_ObjectHideFlags: 0
