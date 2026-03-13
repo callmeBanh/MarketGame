@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: da3f9d4f196c9e4499fb1dc0817602d9
+guid: 06bff888012b032468b5cbe78c481fa9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9018937474453647064
-    second: button ok_0
+      213: -7605780304180062737
+    second: Screenshot 2026-03-05 151830_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +84,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,6 +98,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button ok_0
+      name: Screenshot 2026-03-05 151830_0
       rect:
         serializedVersion: 2
-        x: 35
+        x: 39
         y: 18
-        width: 178
-        height: 74
+        width: 80
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8215bbfb62c46d280800000000000000
-      internalID: -9018937474453647064
+      spriteID: fe55fa94c17d27690800000000000000
+      internalID: -7605780304180062737
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      button ok_0: -9018937474453647064
+      Screenshot 2026-03-05 151830_0: -7605780304180062737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

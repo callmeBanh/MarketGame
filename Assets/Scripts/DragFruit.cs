@@ -19,6 +19,10 @@ public class DragFruit : MonoBehaviour
 
     void OnMouseDown()
     {
+        // THÊM DÒNG NÀY: Nếu game đang dừng (Panel đang hiện) thì không cho kéo
+    if (Time.timeScale == 0) return; 
+
+    isDragging = true;
         isDragging = true;
     }
 
