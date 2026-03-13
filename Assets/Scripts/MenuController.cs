@@ -1,68 +1,65 @@
 using UnityEngine;
-using UnityEngine.UI; // Cần thư viện này để điều khiển Button
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private Button nextLevelButton; // Kéo nút "Chơi tiếp" vào đây trong Inspector
+    [SerializeField] private Button nextLevelButton; 
 
     void Start()
     {
-        // Nếu đang ở màn hình Win, kiểm tra xem có phải màn cuối không
-        if (nextLevelButton != null)
+        // Kiểm tra nút Chơi tiếp ở màn Win: Nếu là màn 3 (Index 2) thì khóa nút
+        if (nextLevelButton != null && GameManager.currentLevelIndex >= 2)
         {
-            // Nếu GameManager đã hết màn chơi
-            // Giả sử bạn có 3 màn, Index màn cuối là 2
-            if (GameManager.currentLevelIndex >= 2) 
-            {
-                nextLevelButton.interactable = false; // Vô hiệu hóa nút
-                // Hoặc ẩn luôn nút: nextLevelButton.gameObject.SetActive(false);
-            }
+            nextLevelButton.interactable = false;
         }
     }
 
-public void NextLevel()
-{
-    Time.timeScale = 1;
-    // CHỈ tăng Index khi thực sự bấm nút Chơi tiếp
-    GameManager.currentLevelIndex++; 
-    
-    // Kiểm tra nếu vượt quá màn 3 (Index 2) thì quay về màn 1 (Index 0)
-    if (GameManager.currentLevelIndex > 2) 
-    {
-        GameManager.currentLevelIndex = 0;
-    }
-    loadingController.LoadScene("GamePlay");
-}
+    // --- HÀM MỚI CHO SCENE STARTGAME ---
 
-public void TryAgain()
-{
-    Time.timeScale = 1;
-    // Giữ nguyên Index để nạp lại đúng màn vừa thua
-    loadingController.LoadScene("GamePlay");
-}
+    // Gán hàm này vào nút "CHƠI" ở màn hình bắt đầu
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+        GameManager.currentLevelIndex = 0; // Luôn bắt đầu từ màn 1 khi nhấn Chơi mới
+        // Gọi màn hình Loading trước khi vào GamePlay
+        loadingController.LoadScene("GamePlay"); 
+    }
+
+    // Gán hàm này vào nút "THOÁT"
+    public void QuitGame()
+    {
+        Debug.Log("Đang thoát game...");
+        #if UNITY_EDITOR
+            // Nếu đang chạy trong Unity Editor thì dừng Play mode
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            // Nếu là bản build thực tế thì thoát ứng dụng
+            Application.Quit();
+        #endif
+    }
+
+    // --- CÁC HÀM ĐIỀU KHIỂN CHUYỂN CẢNH KHÁC ---
+
+    public void NextLevel()
+    {
+        Time.timeScale = 1;
+        // Chỉ tăng Index khi người dùng nhấn "Chơi tiếp"
+        GameManager.currentLevelIndex++; 
+        if (GameManager.currentLevelIndex > 2) GameManager.currentLevelIndex = 0;
+        loadingController.LoadScene("GamePlay");
+    }
+
+    public void TryAgain()
+    {
+        Time.timeScale = 1;
+        // Load lại đúng màn hiện tại vì currentLevelIndex không đổi
+        loadingController.LoadScene("GamePlay");
+    }
 
     public void BackToMainMenu()
     {
         Time.timeScale = 1;
         GameManager.currentLevelIndex = 0; 
         loadingController.LoadScene("StartGame");
-    }
-
-    public void QuitGame()
-    {
-          Debug.Log("Quit Game Clicked");
-
-    #if UNITY_EDITOR
-    UnityEditor.EditorApplication.isPlaying = false;
-    #else
-    Application.Quit();
-    #endif
-    }
-
-    public void startGame()
-    {
-        Time.timeScale = 1;
-        GameManager.currentLevelIndex = 0; 
-        loadingController.LoadScene("GamePlay");
     }
 }
