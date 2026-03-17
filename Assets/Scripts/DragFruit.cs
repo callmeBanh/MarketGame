@@ -64,9 +64,6 @@ public class DragFruit : MonoBehaviour
                     // Đổi hình ảnh thúng thành thúng có quả
                     basket.UpdateToFullSprite(); 
                     
-                    // Phát âm thanh nếu có
-                    if (sound.instance != null) sound.instance.ToggleSound(); 
-                    
                     break;
                 }
             }
