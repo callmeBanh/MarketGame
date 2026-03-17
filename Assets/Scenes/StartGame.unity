@@ -670,7 +670,6 @@ GameObject:
   - component: {fileID: 1224004353}
   - component: {fileID: 1224004352}
   - component: {fileID: 1224004351}
-  - component: {fileID: 1224004350}
   - component: {fileID: 1224004354}
   m_Layer: 5
   m_Name: soundButton
@@ -698,21 +697,6 @@ RectTransform:
   m_AnchoredPosition: {x: 85, y: -69}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1224004350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224004348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01d3833445f30c46aed2530c1bf8162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::soundButton
-  icon: {fileID: 1224004352}
-  soundOn: {fileID: 5838030690933406898, guid: 17e0f6f01494c3140beca02123d121dc, type: 3}
-  soundOff: {fileID: -6425717075171653200, guid: 17e0f6f01494c3140beca02123d121dc, type: 3}
 --- !u!114 &1224004351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224004350}
+      - m_Target: {fileID: 2063958856}
         m_TargetAssemblyTypeName: soundButton, Assembly-CSharp
         m_MethodName: OnSoundButtonPressed
         m_Mode: 1
@@ -1097,6 +1081,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063958855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063958857}
+  - component: {fileID: 2063958856}
+  m_Layer: 0
+  m_Name: soundButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063958856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063958855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01d3833445f30c46aed2530c1bf8162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::soundButton
+  icon: {fileID: 1224004352}
+  soundOn: {fileID: 5838030690933406898, guid: 17e0f6f01494c3140beca02123d121dc, type: 3}
+  soundOff: {fileID: -6425717075171653200, guid: 17e0f6f01494c3140beca02123d121dc, type: 3}
+--- !u!4 &2063958857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063958855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.36391, y: 4.63585, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1105,3 +1136,4 @@ SceneRoots:
   - {fileID: 1241085257}
   - {fileID: 2023612722}
   - {fileID: 1172344140}
+  - {fileID: 2063958857}
